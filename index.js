@@ -4,13 +4,14 @@ const app = express();
 var server = http.createServer(app);
 
 app.get('/', function(req, res){
-    res.send('I like IU!');
+    res.send('I like shjoo!');
 });
 
 app.get('/start', function(req, res){
     res.send('start page!');
 });
 
-server.listen(3000, '127.0.0.1', function(){
+//아까 nginx설정 했을때 그것임 
+server.listen(3000, '127.0.0.1', function(){ //로컬에서 3000포트로 연결 
     console.log('Server listen on port!'+ server.address().port);
 });
